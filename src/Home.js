@@ -117,11 +117,11 @@ const Home = () => {
 
         {/* Background Video (only if not default) */}
         {theme !== 'default' && (
-          <video autoPlay loop muted className="background-video">
-            <source src={`/${theme}.mp4`} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        )}
+            <video autoPlay loop muted className="background-video">
+                <source src={`${process.env.PUBLIC_URL}/${theme}.mp4`} type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            )}
       </div>
     </div>
   );

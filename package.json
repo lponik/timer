@@ -1,5 +1,6 @@
 {
   "name": "timer",
+  "homepage": "https://lponik.github.io/timer",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -40,4 +41,5 @@
   "devDependencies": {
     "gh-pages": "^6.2.0"
   }
+  
 }
