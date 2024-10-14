@@ -1,0 +1,177 @@
+/* Ensure the html and body take full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+
+}
+
+.outer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;  /* Full viewport height */
+  width: 100vw;   /* Full viewport width */
+}
+
+.app-container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);  /* Softer shadow */
+
+  /* Flexbox settings for container */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center;
+  min-height: 450px;  /* Adjusted height */
+  min-width: 350px;   /* Adjusted width */
+}
+
+.timer-display {
+  font-size: 8rem;  /* Larger timer font size */
+  color: #333;  /* Dark timer color */
+  margin-bottom: 20px;  /* Space below the timer */
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;  /* Distribute buttons evenly */
+  width: 100%;
+}
+
+button {
+  flex: 1;
+  margin: 0 5px;  /* Add margin between buttons */
+  padding: 10px;
+  background-color: #007bff;  /* Primary button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;  /* Darker blue on hover */
+}
+
+button:active {
+  background-color: #004085;  /* Even darker when active */
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;  /* Make them take up the full width of the container */
+}
+
+.input-container input {
+  width: 45%;  /* Make each input take about half the available space */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #007bff;  /* Border color matches button on focus */
+  outline: none;
+}
+
+button, select {
+  padding: 10px;
+}
+
+select {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+select:focus {
+  border-color: #007bff;
+}
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+/* Theme styles */
+.default .app-container{
+  background-color: #5a2323;
+  background-size: cover;
+  background-position: center;
+}
+
+.default-title-color {
+  color: blue;
+}
+
+
+
+.campfire-theme button {
+  background-color: orange;
+}
+
+.campfire-theme button:hover {
+  background-color: darkorange;
+}
+
+.campfire-theme button:active {
+  background-color: #cc5500;
+}
+
+.campfire-theme .timer-display {
+  color: white;  /* Make the timer white in campfire theme */
+}
+
+.campfire-theme .input-container input {
+  color: rgb(55, 53, 53);
+  
+}
+.campfire-theme .input-container input::placeholder {
+  color: rgb(75, 70, 70);  /* Change to your preferred color */
+}
+
+/* Remove background when campfire theme is selected */
+.campfire-theme {
+  background: none !important;  /* Ensure background is removed */
+}
+
+.campfire-theme .app-container {
+  background: none !important;  /* Remove the background of the app container */
+}
+
+.theme-selector {
+  position: absolute;
+  top: 20px;  
+  left: 20px;
+  width: 150px;
+  background-color: rgb(65, 62, 62);
+  padding: 5px;
+  font-size: 1rem;
+  z-index: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  color: white;
+}
